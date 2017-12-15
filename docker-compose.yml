@@ -1,0 +1,25 @@
+version: '2'
+
+services:
+  postgres:
+    image: postgres:9.6.2
+
+  bundle:
+    image: sento/activecom
+    command: echo Bundler data container
+    volumes:
+      - /bundle
+  app:
+    image: sento/activecom
+    build: .
+    command: rake -T
+    links:
+     - postgres:database
+    environment:
+      - DATABASE_HOST=database
+      - DATABASE_USER=postgres
+      - RAILS_ENV=development
+    volumes:
+      - .:/application/
+    volumes_from:
+      - bundle
