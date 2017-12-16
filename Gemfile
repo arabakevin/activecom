@@ -13,6 +13,6 @@ gemspec
 # To use a debugger
 # gem 'byebug', group: [:development, :test]
 
-gem 'pg', '~> 0.21.0'
 gem 'cucumber-rails', '~> 1.5.0', require: false, group: :test
 gem 'database_cleaner', '~> 1.6.2', group: :test
+gem 'pg', '~> 0.21.0'
