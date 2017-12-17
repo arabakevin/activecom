@@ -18,7 +18,6 @@ Gem::Specification.new do |s|
                 'README.md']
 
   s.add_dependency 'font-awesome-rails', '~> 4.7.0.2'
-  s.add_dependency 'js_cookie_rails', '~> 2.1.4'
   s.add_dependency 'rails', '~> 5.1.4'
 
   # s.add_development_dependency 'pg', '~> 0.21.0'
