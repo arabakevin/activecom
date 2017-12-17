@@ -20,8 +20,12 @@ ENV APP_HOME /application
 
 # ~~~~ Application dependencies ~~~~
 RUN apt-get update && \
+    apt-get install -y curl
+RUN curl -sL https://deb.nodesource.com/setup_8.x | bash -
+RUN apt-get update && \
     apt-get install -y libpq-dev \
-                       build-essential
+                       build-essential \
+                       nodejs
 
 # ~~~~ Bundler ~~~~
 RUN gem install bundler
