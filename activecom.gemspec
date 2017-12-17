@@ -1,4 +1,4 @@
-$:.push File.expand_path('../lib', __FILE__)
+$LOAD_PATH.push File.expand_path('../lib', __FILE__)
 
 # Maintain your gem's version:
 require 'activecom/version'
@@ -14,7 +14,7 @@ Gem::Specification.new do |s|
   s.description = 'Intercom.io alternative as a Rails engine'
   s.license     = 'MIT'
 
-  s.files = Dir["{app,config,db,lib}/**/*", 'MIT-LICENSE', 'Rakefile',
+  s.files = Dir['{app,config,db,lib}/**/*', 'MIT-LICENSE', 'Rakefile',
                 'README.md']
 
   s.add_dependency 'rails', '~> 5.1.4'
