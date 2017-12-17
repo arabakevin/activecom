@@ -1,5 +1,4 @@
 require 'font-awesome-rails'
-require 'js_cookie_rails'
 
 require 'activecom/view_helpers'
 
